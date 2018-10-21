@@ -1,2 +1,14 @@
 <p>{{quote.aurthorName}}</p>
+<p>This quote was created {{quote.creationDate|dateCount}} days ago</p>
+<div class="buttons">
+<button id="down">Downvote</button>
+    <p id="downvote"></p>
+<button id="up">Upvote</button>
+    <p id="upvote"></p>
+</div>
+
+
+
+
+
 <button (click)="quoteDelete(true)">Delete Quote</button>

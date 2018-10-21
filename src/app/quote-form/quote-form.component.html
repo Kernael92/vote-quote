@@ -1,6 +1,6 @@
 <div class="container-fluid">
    <div class="row">
-      <form>
+      <form (ngSubmit) = 'submitQuote()' #quoteForm = 'ngForm'>
          <div class="form-group">
             <label for="name">Quote</label>
             <textarea class="form-control" id="name" rows="8" required></textarea>
@@ -18,9 +18,11 @@
             <input type="date"  id="creation" required>
 
          </div>
+         <button type="submit" >Add Quote</button>
+
 
       </form>
 
    </div>
-   
+
 </div>
