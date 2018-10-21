@@ -1,7 +1,10 @@
 <div class="container-fluid">
    <div class="row">
+      <div class="col-md-12">
+
+
       <form (ngSubmit) = 'submitQuote()' #quoteForm = 'ngForm'>
-         
+
          <div class="form-group">
             <label for="name">Quote</label>
             <textarea class="form-control" id="name" rows="8" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required></textarea>
@@ -22,6 +25,17 @@
                <p>Author Name is Required</p>
 
             </div>
+            </div>
+
+            <div class="form-group">
+               <label for="submitName">Submit Name</label>
+               <input type="text" required class="form-control" id="submitName" [(ngModel)]="newQuote.submitName" name="submitName" #submitName= "ngModel">
+               Display {{newQuote.submitName}}
+
+               <div [hidden] = "submitName.valid || name.pristine" class="alert alert-primary">
+                  <p>submitted Name is Required</p>
+
+               </div>
 
 
 
@@ -40,11 +54,12 @@
 
 
          </div>
-         <button type="submit" >Add Quote</button>
+         <button class="btn btn-primary " type="submit" >Add Quote</button>
 
 
       </form>
 
+   </div>
    </div>
 
 </div>

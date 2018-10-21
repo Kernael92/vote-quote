@@ -1,14 +1,35 @@
-<p>{{quote.aurthorName}}</p>
-<p>This quote was created {{quote.creationDate|dateCount}} days ago</p>
-<div class="buttons">
-<button id="down">Downvote</button>
-    <p id="downvote"></p>
-<button id="up">Upvote</button>
-    <p id="upvote"></p>
+<div class="row">
+   <div class="col-md-8">
+
+         <p  class="bg-info">{{quote.aurthorName}} is the author of the quote</p>
+         <p>{{quote.submitName}} submitted the quote</p>
+   </div>
+
+   <div class="col-md-8">
+      <p class="bg-info">This quote was created {{quote.creationDate|dateCount}} days ago</p>
+   </div>
+
+
+
+
+</div>
+
+<div class="buttons ">
+   <div class="row">
+      <div class="col-md-3">
+         <button class=" btn btn-warning" id="down">Downvote</button>
+             <p id="downvote"></p>
+         <button  class=" btn btn-warning"id="up">Upvote</button>
+             <p id="upvote"></p>
+
+      </div>
+
+   </div>
+
 </div>
 
 
 
 
 
-<button (click)="quoteDelete(true)">Delete Quote</button>
+<button class="btn btn-danger" (click)="quoteDelete(true)">Delete Quote</button>

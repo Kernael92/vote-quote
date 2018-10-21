@@ -1,21 +1,24 @@
 
 
-<div class="container">
-   <div class="jumbotron">
-      <h1>INSPIRATIONAL QUOTES</h1>
-   </div>
+   <div class="container">
+      <div class="jumbotron">
+         <h1>INSPIRATIONAL QUOTES</h1>
+      </div>
 
-   <div class="row">
-   <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
-   </div>
-
-</div>
-<ul>
-   <div  *ngFor='let quote of quotes; let i = index'>
-      <li class="bg-info">{{quote.name}}</li>
-      <button (click)=toggleDetails(i)>Toggle Details</button>
-      <app-quote-details *ngIf='quote.showAuthorName'[quote] = 'quote' (isRead) = 'deleteQuote($event,i)'></app-quote-details>
+      <div class="row">
+      <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
+      </div>
 
    </div>
+   <ul>
+      <div  *ngFor='let quote of quotes; let i = index'>
+         <div class="col-md-8">
+            <li class="bg-info">{{quote.name}}</li>
+         </div>
 
-</ul>
+         <button class="btn btn-success"(click)=toggleDetails(i)>Toggle Details</button>
+         <app-quote-details *ngIf='quote.showAuthorName' [quote] = 'quote' (isRead) = 'deleteQuote($event,i)' ></app-quote-details>
+
+      </div>
+
+   </ul>
