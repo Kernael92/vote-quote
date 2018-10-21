@@ -1,4 +1,7 @@
 
+<body>
+   <div style="background-color:  #b33c00;">
+
 
    <div class="container">
       <div class="jumbotron">
@@ -12,13 +15,15 @@
    </div>
    <ul>
       <div  *ngFor='let quote of quotes; let i = index'>
-         <div class="col-md-8">
+         <div class="col-md-9">
             <li class="bg-info">{{quote.name}}</li>
          </div>
 
          <button class="btn btn-success"(click)=toggleDetails(i)>Toggle Details</button>
-         <app-quote-details *ngIf='quote.showAuthorName' [quote] = 'quote' (isRead) = 'deleteQuote($event,i)' ></app-quote-details>
+         <app-quote-details *ngIf='quote.showAuthorName' [quote] = 'quote' (isRead) = 'deleteQuote($event,i)' (isIncrement) = "voteUp($event)" (isDecrement) = "voteDown($event)" ></app-quote-details>
 
       </div>
 
    </ul>
+   </div>
+</body>

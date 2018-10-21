@@ -1,5 +1,5 @@
 <div class="container-fluid">
-   <div class="row">
+   <div class="row" style= "font-size: 25px; font-family: sans-serif; font-style: normal;">
       <div class="col-md-12">
 
 
@@ -7,10 +7,10 @@
 
          <div class="form-group">
             <label for="name">Quote</label>
-            <textarea class="form-control" id="name" rows="8" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required></textarea>
+            <textarea class="form-control" id="name" rows="4" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required></textarea>
             Display {{newQuote.name}}
             <div [hidden] = "name.valid || name.pristine" class="alert alert-primary">
-               <p>Name is Required</p>
+               <p>Quote is Required</p>
 
             </div>
 
@@ -28,12 +28,12 @@
             </div>
 
             <div class="form-group">
-               <label for="submitName">Submit Name</label>
+               <label for="submitName">Your Name</label>
                <input type="text" required class="form-control" id="submitName" [(ngModel)]="newQuote.submitName" name="submitName" #submitName= "ngModel">
                Display {{newQuote.submitName}}
 
                <div [hidden] = "submitName.valid || name.pristine" class="alert alert-primary">
-                  <p>submitted Name is Required</p>
+                  <p>Your Name is Required</p>
 
                </div>
 

@@ -1,11 +1,15 @@
 <div class="row">
-   <div class="col-md-8">
+   <div class="col-md-3">
 
          <p  class="bg-info">{{quote.aurthorName}} is the author of the quote</p>
-         <p>{{quote.submitName}} submitted the quote</p>
+
+   </div>
+   <div class="col-md-3">
+      <p class="bg-info">{{quote.submitName}} submitted the quote</p>
    </div>
 
-   <div class="col-md-8">
+
+   <div class="col-md-3">
       <p class="bg-info">This quote was created {{quote.creationDate|dateCount}} days ago</p>
    </div>
 
@@ -17,11 +21,14 @@
 <div class="buttons ">
    <div class="row">
       <div class="col-md-3">
-         <button class=" btn btn-warning" id="down">Downvote</button>
-             <p id="downvote"></p>
-         <button  class=" btn btn-warning"id="up">Upvote</button>
+
+         <button  class=" btn btn-warning" (click)="upVote">Upvote</button>
              <p id="upvote"></p>
 
+      </div>
+      <div class="col-md-3">
+         <button class=" btn btn-warning" (click)="downVote">Downvote</button>
+             <p id="downvote"></p>
       </div>
 
    </div>
