@@ -7,7 +7,7 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-   
+
 
    quotes = [
       new Quote(1,"I actually think that the most efficacious way of making a difference is to lead by example, and doing random acts of kindness is setting a very good example of how to behave in the world.", "Misha Collins", new Date(2017,0,23)),
@@ -20,13 +20,14 @@ export class QuoteComponent implements OnInit {
   toggleDetails(index){
      this.quotes[index].showAuthorName = !this.quotes[index].showAuthorName;
  }
-   deleteQuote(isRead:boolean){
-      if(isRead){
+   deleteQuote(isRead, index){
+      if (isRead){
          let toDelete = confirm('Are you you want to delete this quote?')
-      }else {
+
          if(toDelete){
             this.quotes.splice(index,1)
          }
+
 
       }
    }
