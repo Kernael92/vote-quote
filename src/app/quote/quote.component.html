@@ -1,5 +1,10 @@
-<h1>INSPIRATIONAL QUOTES</h1>
+
+
 <div class="container">
+   <div class="jumbotron">
+      <h1>INSPIRATIONAL QUOTES</h1>
+   </div>
+
    <div class="row">
    <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
    </div>
@@ -7,7 +12,7 @@
 </div>
 <ul>
    <div  *ngFor='let quote of quotes; let i = index'>
-      <li>{{quote.name}}</li>
+      <li class="bg-info">{{quote.name}}</li>
       <button (click)=toggleDetails(i)>Toggle Details</button>
       <app-quote-details *ngIf='quote.showAuthorName'[quote] = 'quote' (isRead) = 'deleteQuote($event,i)'></app-quote-details>
 
