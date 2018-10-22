@@ -7,7 +7,7 @@ KERNAEL APUKO
 # VoteQuote
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.5.
-This project enables a user to create a new quote as well as up vote and down vote different quotes.
+This project enables a user to create a new quote as well as up vote or down vote different quotes.
 
 ## Development server
 
