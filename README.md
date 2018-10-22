@@ -1,6 +1,13 @@
+# author
+KERNAEL APUKO
+
+
+
+
 # VoteQuote
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.5.
+This project enables a user to create a new quote as well as up vote and down vote different quotes.
 
 ## Development server
 
@@ -25,3 +32,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Licence
+This application is under MIT licence
+Copyright <2018> <Kernael Apuko>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
