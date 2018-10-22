@@ -20,7 +20,7 @@
          </div>
 
          <button class="btn btn-success"(click)=toggleDetails(i)>Toggle Details</button>
-         <app-quote-details *ngIf='quote.showAuthorName' [quote] = 'quote' (isRead) = 'deleteQuote($event,i)' (isIncrement) = "voteUp($event)" (isDecrement) = "voteDown($event)" ></app-quote-details>
+         <app-quote-details *ngIf='quote.showAuthorName' [quote] = 'quote' (isRead) = 'deleteQuote($event,i)'  ></app-quote-details>
 
       </div>
 

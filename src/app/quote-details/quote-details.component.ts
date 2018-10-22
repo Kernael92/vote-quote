@@ -14,11 +14,11 @@ export class QuoteDetailsComponent implements OnInit {
    quoteDelete(read:boolean){
       this.isRead.emit(read);
    }
-   upVote(increment){
-      this.isIncrement.emit(increment);
+   upVote(){
+      this.quote.upVote ++
    }
-   downVote(decrement){
-      this.isDecrement.emit(decrement);
+   downVote(){
+      this.quote.downVote ++
    }
 
 

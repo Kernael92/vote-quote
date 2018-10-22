@@ -1,3 +1,7 @@
+
+<body ng-app="">
+
+
 <div class="container-fluid">
    <div class="row" style= "font-size: 25px; font-family: sans-serif; font-style: normal;">
       <div class="col-md-12">
@@ -28,7 +32,7 @@
             </div>
 
             <div class="form-group">
-               <label for="submitName">Your Name</label>
+               <label for="submitName">Submitted by</label>
                <input type="text" required class="form-control" id="submitName" [(ngModel)]="newQuote.submitName" name="submitName" #submitName= "ngModel">
                Display {{newQuote.submitName}}
 
@@ -63,3 +67,4 @@
    </div>
 
 </div>
+</body>

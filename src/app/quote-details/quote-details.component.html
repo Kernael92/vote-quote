@@ -18,17 +18,17 @@
 
 </div>
 
-<div class="buttons ">
+<div class="button">
    <div class="row">
       <div class="col-md-3">
 
-         <button  class=" btn btn-warning" (click)="upVote">Upvote</button>
-             <p id="upvote"></p>
+         <button  class=" btn btn-warning" (click)="upVote()">Up ({{quote.upVote}})</button>
+             <!-- <p>{{quote.up_votes}}</p> -->
 
       </div>
       <div class="col-md-3">
-         <button class=" btn btn-warning" (click)="downVote">Downvote</button>
-             <p id="downvote"></p>
+         <button class=" btn btn-warning" (click)="downVote()">Down ({{quote.downVote}})</button>
+             <!-- <p >{{quote.down_votes}}</p> -->
       </div>
 
    </div>
