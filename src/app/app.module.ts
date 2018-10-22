@@ -17,8 +17,8 @@ import { DateCountPipe } from './date-count.pipe';
     DateCountPipe,
   ],
   imports: [
-    BrowserModule
-    FormsModule
+    BrowserModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
