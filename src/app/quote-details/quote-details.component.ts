@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { Quote } from '../quote'
+import { Quote } from '../quote';
 
 @Component({
   selector: 'app-quote-details',
@@ -8,17 +8,17 @@ import { Quote } from '../quote'
 })
 export class QuoteDetailsComponent implements OnInit {
 
-   @Input() quote:Quote;
+   @Input() quote: Quote;
    @Output() isRead = new EventEmitter<boolean>();
 
-   quoteDelete(read:boolean){
+   quoteDelete(read: boolean) {
       this.isRead.emit(read);
    }
-   upVote(){
-      this.quote.upVote ++
+   upVote() {
+      this.quote.upVote ++;
    }
-   downVote(){
-      this.quote.downVote ++
+   downVote() {
+      this.quote.downVote ++;
    }
 
 

@@ -17,16 +17,16 @@ export class QuoteComponent implements OnInit {
 
   ]
 
-  toggleDetails(index){
+  toggleDetails(index) {
      this.quotes[index].showAuthorName = !this.quotes[index].showAuthorName;
      this.quotes[index].showSubmitName = !this.quotes[index].showSubmitName;
 
  }
-   deleteQuote(isRead, index){
-      if (isRead){
+   deleteQuote(isRead, index) {
+      if (isRead) {
          let toDelete = confirm('Are you you want to delete this quote?')
 
-         if(toDelete){
+         if (toDelete) {
             this.quotes.splice(index,1)
          }
 
@@ -34,7 +34,7 @@ export class QuoteComponent implements OnInit {
       }
    }
 
-   addNewQuote(quote){
+   addNewQuote(quote) {
       let quoteLength = this.quotes.length;
       quote.id = quoteLength+1;
       quote.creationDate = new Date(quote.creationDate)
